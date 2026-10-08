@@ -10,14 +10,25 @@
 //   4. Formateo: guarda con Prettier para que quede bien indentado.
 // Debe imprimir exactamente lo mismo. Cuando funcione, borra el código sucio.
 
-var x = { n: "Ana", e: 17 };
-var y = { n: "Luis", e: 20 };
-var z = { n: "Sofía", e: 22 };
-
-if (x.e >= 18) console.log(x.n + " puede entrar"); else console.log(x.n + " no puede entrar");
-  if (y.e >= 18) console.log(y.n + " puede entrar"); else console.log(y.n + " no puede entrar");
-      if (z.e >= 18) console.log(z.n + " puede entrar"); else console.log(z.n + " no puede entrar");
 
 // <--- AQUÍ TU CÓDIGO --->
+const MAYORIA_DE_EDAD = 18;
 
+const personas = [
+  { nombre: "Ana", edad: 17 },
+  { nombre: "Luis", edad: 20 },
+  { nombre: "Sofía", edad: 22 },
+];
+
+function revisarAcceso(persona) {
+  const esMayorDeEdad = persona.edad >= MAYORIA_DE_EDAD;
+
+  if (esMayorDeEdad) {
+    console.log(persona.nombre + " puede entrar");
+  } else {
+    console.log(persona.nombre + " no puede entrar");
+  }
+}
+
+personas.forEach(revisarAcceso);
 // <--- FIN DE TU CÓDIGO --->
