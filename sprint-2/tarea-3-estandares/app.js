@@ -20,4 +20,26 @@ if (x.e >= 18) console.log(x.n + " puede entrar"); else console.log(x.n + " no p
 
 // <--- AQUÍ TU CÓDIGO --->
 
+const MAYORIA_DE_EDAD = 18;
+
+
+const personas = [
+  { nombre: "Ana", edad: 17 },
+  { nombre: "Luis", edad: 20 },
+  { nombre: "Sofía", edad: 22 }
+];
+
+
+function revisarAcceso(persona) {
+  const esMayorDeEdad = persona.edad >= MAYORIA_DE_EDAD;
+
+  if (esMayorDeEdad) {
+    console.log(persona.nombre + " puede entrar");
+  } else {
+    console.log(persona.nombre + " no puede entrar");
+  }
+}
+
+
+personas.forEach(revisarAcceso);
 // <--- FIN DE TU CÓDIGO --->
